@@ -4,8 +4,11 @@ const express = require('express');
 const app = express();
 const port = 3000;
 
+// Build a response: 'hello world on' the route path
+// http://localhost:3000/
+
 app.get('/', (req, res) => {
-    res.send('Hello World! Updated message')
+    res.send('Hello World!')
 });
 
 app.listen(port, () => {
@@ -17,7 +20,7 @@ app.listen(port, () => {
 
 // returns
 
-// > expensetracker@1.0.0 start
+// > clg-nodejs-4@1.0.0 start
 // > node myAPI.js
 
 // Example app listening on port 3000!
