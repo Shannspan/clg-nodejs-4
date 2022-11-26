@@ -1,0 +1,25 @@
+{
+  "name": "clg-nodejs-4",
+  "version": "1.0.0",
+  "description": "CLG Node JS Lesson 4",
+  "main": "myAPI.js",
+  "scripts": {
+    "start": "nodemon myAPI.js",
+    "test": "jest --coverage"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Shannspan/clg-nodejs-4.git"
+  },
+  "author": "Shannon",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "dotenv": "^16.0.3"
+  },
+
+  "bugs": {
+    "url": "https://github.com/Shannspan/clg-nodejs-4/issues"
+  },
+  "homepage": "https://github.com/Shannspan/clg-nodejs-4#readme"
+}
