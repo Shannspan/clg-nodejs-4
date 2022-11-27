@@ -45,7 +45,7 @@ const port = 3000;
 // I will use a simple generator to create id 
 //as this is more likely in real work space scenario
 // I will use functions to contain blocks of code 
-// that are relevent to each route
+// that are relevent to each route (skill practice)
 //will still have to comment out as using same port
 
 // function firstUserRoute() {
@@ -65,16 +65,17 @@ const port = 3000;
 //modify your code to handle a route that does not exist
 //display result in 0.0.0.0:3000/firstServer
 
+//function below will display desired error message 
+// but not in port 0.0.0.0.3000
+// adding 0.0.0.0 to port variable does not work - FIX REQUIRED
+
 function firstServerRoute() {  
-    
-    // app.get('/firstServer/noRoute', (req, res) => {
-    //     res.send(`Oops! We can't find the page you want right now - please click on the home button to try another search`)
-    // });
+
 
     app.get(`/firstServer*`, (req, res) => {
-        res.send(`Oops! We can't find the page you want right now - please click on the home button to try another search.`)
+        res.status(404).send(`Oops! We can't find the page you want right now - please click on the home button to try another search.`)
     });
-    
+
     app.listen(port, () => {
         console.log(`Example app listening on port ${port}/firstServer/noRoute`)
     });
