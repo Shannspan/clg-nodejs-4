@@ -2,7 +2,7 @@
 
 const express = require('express');
 const app = express();
-const port = 3000;
+// const port = 3000;
 
 // Build a response: 'hello world on' the route path
 // http://localhost:3000/
@@ -71,15 +71,25 @@ const port = 3000;
 
 function firstServerRoute() {  
 
+    const port = 3000;
 
+//check if file path is needed in app.get.
+//may be more appropriate in catch try throw? 
     app.get(`/firstServer*`, (req, res) => {
+        
         res.status(404).send(`Oops! We can't find the page you want right now - please click on the home button to try another search.`)
     });
 
     app.listen(port, () => {
         console.log(`Example app listening on port ${port}/firstServer/noRoute`)
     });
-    }
+}
+
+    // app.use((err, req, res, next) => {
+    //     console.error(err.stack)
+    //     res.status(404).send('Something broke!')
+    //   })
+    
     firstServerRoute();
 
 //make sure nodemon is included in package.json "start"
