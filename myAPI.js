@@ -73,8 +73,13 @@ function firstServerRoute() {
 
     const port = 3000;
 
+// simple logic test: enter localhost:3000/test in browser
+// which returns 404 status not found / cannot get test
+// this error message does not bring up the 0.0.0.0 route
+
 //check if file path is needed in app.get.
 //may be more appropriate in catch try throw? 
+
     app.get(`/firstServer*`, (req, res) => {
         
         res.status(404).send(`Oops! We can't find the page you want right now - please click on the home button to try another search.`)
