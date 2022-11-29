@@ -5,7 +5,7 @@ CLG Node JS Lesson 4
 
 * Create a local server using express that listens to port '3000'
 
-* Build a response that retruns 'hello world' on the route path http:/localhost:3000/
+* Build a response that retruns 'hello world' on the route path http://localhost:3000/
 
 * Now modify the middleware to add a new route 'firstServer' and display a message,
     "Hi there! This is my first route built using express framework."
@@ -16,5 +16,8 @@ CLG Node JS Lesson 4
 * Now modify your code to handle a route that does not exist. Return a 404 page for a route that's not handled eg. '/noroute'
 
 * Run the code through your terminal
+
+* The result should be displayed in http://0.0.0.0:3000/firstServer
+    * This step later removed from assignment by tutor
 
 * Exit Node.js 
