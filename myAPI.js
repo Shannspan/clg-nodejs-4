@@ -67,7 +67,7 @@ const app = express();
 
 //function below will display desired error message 
 // but not in port 0.0.0.0.3000
-// adding 0.0.0.0 to port variable does not work - FIX REQUIRED
+// adding 0.0.0.0 to port variable does not work
 
 function firstServerRoute() {  
 
@@ -78,10 +78,11 @@ function firstServerRoute() {
 // this error message does not bring up the 0.0.0.0 route
 
 //check if file path is needed in app.get.
-//may be more appropriate in catch try throw? 
+//may be more appropriate in try catch throw? 
 
     app.get(`/firstServer*`, (req, res) => {
-        
+        // use natural language in error message and supply an option 
+        //to bring the user back to the site
         res.status(404).send(`Oops! We can't find the page you want right now - please click on the home button to try another search.`)
     });
 
@@ -89,7 +90,9 @@ function firstServerRoute() {
         console.log(`Example app listening on port ${port}/firstServer/noRoute`)
     });
 }
-
+//check if app.use with and error parameter will open in 0.0.0.0.
+// no it doesn't
+// ***discussed with tutor, disregard 0.0.0.0. part of assignment***
     // app.use((err, req, res, next) => {
     //     console.error(err.stack)
     //     res.status(404).send('Something broke!')
